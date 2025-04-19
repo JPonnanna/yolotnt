@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 
 app = FastAPI()
-model = YOLO("app/best.pt")  # Adjust if needed based on folder structure
+model = YOLO("best.pt")  # Adjust if needed based on folder structure
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
